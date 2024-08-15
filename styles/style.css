@@ -46,6 +46,11 @@ footer {
   margin-block-start: 10px;
 }
 
+/* Контейнеры в секции 3 */
+.main___concentrate-better__concentrate {
+  margin-inline-start: 8px;
+}
+
 /* Шапка */
 .header {
   position: relative;
@@ -207,7 +212,40 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  gap: 20px;
+  column-gap: 20px;
+}
+
+/* Третия секция (Как кноцентрироваться лучше) */
+.main___concentrate-better {
+  margin-block-start: 80px;
+  margin-inline: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(5, min-content);
+}
+
+.main___concentrate-better__concentrate {
+  margin-block-start: 20px;
+}
+
+.main__section-concentrate-better-title {
+  grid-row-start: span 5;
+}
+
+.main___concentrate-better__concentrate > h3:first-child {
+  margin-block-start: -20px;
+}
+
+h3 + h4 {
+  margin-block-start: 22px;
+}
+
+h4.accent-title {
+  font-weight: normal;
+}
+
+h4 ~ p {
+  margin-block-start: 10px;
 }
 
 /* Медиа-запросы (Планшет 1024x768)*/
@@ -264,6 +302,11 @@ footer {
 
   .concentration__container {
     margin-block-start: 20px;
+  }
+
+  /* Секция 3 */
+  .main___concentrate-better__concentrate {
+    margin-inline-start: 11px;
   }
 }
 
@@ -342,5 +385,20 @@ footer {
 
   .main__section-concentration-paragraphs {
     margin-block-start: 11px;
+  }
+
+  /* Секция 3 */
+  .main___concentrate-better {
+    margin-block-start: 50px;
+    margin-inline: 10px;
+    display: block;
+  }
+
+  .main___concentrate-better__concentrate {
+    margin-inline-start: 0;
+  }
+
+  .main___concentrate-better__concentrate > h3:first-child {
+    margin-block-start: 0;
   }
 }
