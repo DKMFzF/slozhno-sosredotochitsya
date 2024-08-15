@@ -1,6 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  position: relative;
+  font-family: var(--all-font-family), sans-serif;
+  font-size: var(--text-font-size, 18px);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -11,8 +14,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
-  background-color: black;
-  background-image: url('../images/cover-image-dark.png');
+  background-color: grey;
+  background-image: url("../images/cover-image-dark.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -27,29 +30,105 @@
 
 .header__theme-menu-list {
   display: flex;
+  gap: 10px;
+}
+
+/* Общие стили кнопок */
+.header__theme-menu-button {
+  border: none;
+  width: 70px;
+  background-color: transparent;
+  color: var(--menu-text-color, grey);
+  font-size: var(--text-font-size, 18px);
+}
+
+/* Стили для кнопок */
+.header__theme-menu-button_type_light:focus-visible,
+.header__theme-menu-button_type_auto:focus-visible,
+.header__theme-menu-button_type_dark:focus-visible {
+  padding-block-end: 2px;
+  border-bottom: 1px solid var(--menu-text-color, grey);
+  outline: none;
+}
+
+.header__theme-menu-button_type_light:hover,
+.header__theme-menu-button_type_auto:hover,
+.header__theme-menu-button_type_dark:hover {
+  padding-block-end: 2px;
+  outline: 1px solid var(--menu-text-color, grey);
+}
+
+.header__theme-menu-button_type_light:disabled,
+.header__theme-menu-button_type_auto:disabled,
+.header__theme-menu-button_type_dark:disabled {
+  padding-block-end: 2px;
+  outline: 1px solid var(--menu-text-color, grey);
+  pointer-events: none;
 }
 
 /* Заголовок */
 .header__title {
   align-self: center;
-  font-family: var(--all-font-family), sans-serif;
   font-weight: bold;
   font-size: 157px;
   color: var(--header-title-color, blueviolet);
-  text-shadow: 4px 4px 0px var(--text-shadow-color, deeppink);
+  text-shadow: 4px 4px 0px var(--text-shadow-and-menu-color, red);
 }
 
-/* Параграф под шапкой*/ 
+/* Параграф под шапкой*/
 .header__subtitle-paragraph {
   margin-block-end: 83px;
   margin-inline-end: 20px;
   width: 491px;
   height: 71px;
   align-self: center;
-  font-family: var(--all-font-family), sans-serif;
   font-weight: bold;
   font-size: var(--text-font-size, 18px);
   justify-self: end;
   color: var(--subtitle-text-color, black);
-  background-color: var(--text-shadow-color, deeppink);
+  background-color: var(--text-shadow-and-menu-color, red);
+}
+
+/* Надпись REC в правом верхнем углу сайта в тёмной теме */
+.header__decor-rec {
+  position: absolute;
+  inset-block-start: 20px;
+  inset-inline-end: 30px;
+  font-weight: normal;
+  font-size: var(--text-font-size, 18px);
+  color: var(--header-rec-text-color, white);
+}
+
+.header__decor-rec::after {
+  content: "";
+  display: inline-block;
+  margin-inline-start: 10px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--header-rec-text-color, white);
+  border-radius: 50%;
+  box-shadow: 0 0 5px 2px var(--header-rec-text-color, white);
+}
+
+/* Уголки */
+.header::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 20px;
+  inset-block-end: 20px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--text-shadow-and-menu-color, red);
+  border-left: 1px solid var(--text-shadow-and-menu-color, red);
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  inset-inline-end: 20px;
+  inset-block-start: 20px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--text-shadow-and-menu-color, red);
+  border-right: 1px solid var(--text-shadow-and-menu-color, red);
 }
