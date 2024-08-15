@@ -47,7 +47,7 @@ footer {
 }
 
 /* Контейнеры в секции 3 */
-.main___concentrate-better__concentrate {
+.main___concentrate-better__container {
   margin-inline-start: 8px;
 }
 
@@ -150,7 +150,6 @@ footer {
   box-shadow: 0 0 5px 2px var(--header-rec-text-color, deeppink);
 }
 
-
 /* Уголки */
 .header::before {
   content: "";
@@ -189,7 +188,7 @@ footer {
 }
 
 .hero__containers {
-  margin-inline-start: 6px; 
+  margin-inline-start: 6px;
 }
 
 .hero__pparagraphs {
@@ -216,7 +215,7 @@ footer {
 }
 
 /* Третия секция (Как кноцентрироваться лучше) */
-.main___concentrate-better {
+.main___section-concentrate-better {
   margin-block-start: 80px;
   margin-inline: 20px;
   display: grid;
@@ -224,7 +223,7 @@ footer {
   grid-template-rows: repeat(5, min-content);
 }
 
-.main___concentrate-better__concentrate {
+.main___concentrate-better__container {
   margin-block-start: 20px;
 }
 
@@ -232,7 +231,7 @@ footer {
   grid-row-start: span 5;
 }
 
-.main___concentrate-better__concentrate > h3:first-child {
+.main___concentrate-better__container > h3:first-child {
   margin-block-start: -20px;
 }
 
@@ -253,7 +252,7 @@ h4 ~ p {
   /* Шапка */
   .header {
     width: 768px;
-    height: 1024px; 
+    height: 1024px;
   }
 
   .header__theme-menu {
@@ -305,7 +304,7 @@ h4 ~ p {
   }
 
   /* Секция 3 */
-  .main___concentrate-better__concentrate {
+  .main___concentrate-better__container {
     margin-inline-start: 11px;
   }
 }
@@ -363,7 +362,7 @@ h4 ~ p {
   .hero__section-title {
     margin-inline: 10px;
   }
-  
+
   .hero__containers {
     margin-block-start: 20px;
     margin-inline: 10px;
@@ -378,8 +377,8 @@ h4 ~ p {
     margin-inline: 10px;
     width: 300px;
   }
-  
-  .concentration__containers { 
+
+  .concentration__containers {
     margin-inline: 10px;
   }
 
@@ -388,17 +387,17 @@ h4 ~ p {
   }
 
   /* Секция 3 */
-  .main___concentrate-better {
+  .main___section-concentrate-better {
     margin-block-start: 50px;
     margin-inline: 10px;
     display: block;
   }
 
-  .main___concentrate-better__concentrate {
+  .main___concentrate-better__container {
     margin-inline-start: 0;
   }
 
-  .main___concentrate-better__concentrate > h3:first-child {
+  .main___concentrate-better__container > h3:first-child {
     margin-block-start: 0;
   }
 }
