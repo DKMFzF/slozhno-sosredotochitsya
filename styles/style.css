@@ -28,17 +28,24 @@ footer {
   background-color: var(--accent-color, deeppink);
 }
 
+/* Стили для параграфов в секциях */
 .sectional__paragraph-text {
   font-weight: normal;
   color: var(--section-paragraph-text-color, gray);
   line-height: 23.4px;
 }
 
+/* Ссылки в параграфах */
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--accent-color, deeppink);
+}
+
 /* Шапка */
 .header {
   position: relative;
   max-width: 100%;
-  min-height: 768px;
+  height: 768px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
@@ -180,7 +187,7 @@ footer {
   margin-block-start: 10px;
 }
 
-/* Медиа-запросы (Планшет)*/
+/* Медиа-запросы (Планшет 1024x768)*/
 @media (max-width: 768px) {
   /* Шапка */
   .header {
@@ -212,9 +219,18 @@ footer {
     width: 364px;
     height: 117px;
   }
+
+  /* Main-stack */
+  .hero__section-title {
+    margin-inline-end: 7px; /* Добавил этот стиль что бы макету соотвествовал */
+  }
+
+  .hero__containers {
+    margin-inline-start: 13px;
+  }
 }
 
-/* Медиа-запросы (Телефон)*/
+/* Медиа-запросы (Телефон 375px)*/
 @media (max-width: 375px) {
   /* Шапка */
   .header {
@@ -224,7 +240,7 @@ footer {
 
   .header__theme-menu {
     margin-inline-end: 10px;
-    margin-block-start: 24px;
+    margin-block-start: 22px;
   }
 
   .header__title {
@@ -254,5 +270,21 @@ footer {
   .header::after {
     inset-inline-end: 10px;
     inset-block-start: 10px;
+  }
+
+  /* Main-stack */
+  .hero {
+    display: block;
+    padding-block-start: 40px;
+    margin-inline: 0;
+  }
+
+  .hero__section-title {
+    margin-inline: 10px;
+  }
+  
+  .hero__containers {
+    margin-block-start: 20px;
+    margin-inline: 10px;
   }
 }
