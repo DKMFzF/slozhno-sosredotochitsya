@@ -247,6 +247,51 @@ h4 ~ p {
   margin-block-start: 10px;
 }
 
+/* Четвёртый контейнер (А можно в картинках)*/
+.main__section-maybe-pictures {
+  margin-block-start: 80px;
+  margin-inline: 20px;
+}
+
+.main__section-maybe-pictures__img-container {
+  margin-block-start: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, min-content); 
+  gap: 20px;
+}
+
+.img-container__item {
+  overflow: hidden;
+}
+
+.img-container__item img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+}
+
+.div__img-sunset {
+  grid-column-end: span 2;
+}
+
+.div__ice-cream {
+  grid-row-end: span 2;
+}
+
+.div__books {
+  grid-column-start: 2;
+}
+
+.div__tape {
+  grid-row: 2 / 4;
+}
+
+.div__street {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+} 
+
 /* Медиа-запросы (Планшет 1024x768)*/
 @media (max-width: 768px) {
   /* Шапка */
@@ -399,5 +444,24 @@ h4 ~ p {
 
   .main___concentrate-better__container > h3:first-child {
     margin-block-start: 0;
+  }
+
+  /* Секция 4 */
+  .main__section-maybe-pictures {
+    margin-block-start: 50px;
+    margin-inline: 10px;
+  }
+
+  .main__section-maybe-pictures__img-container {
+    margin-block-start: 10px;
+    display: block;
+  }
+
+  .main__section-maybe-pictures__img-container > .img-container__item:first-child {
+    margin-block-start: 0;
+  }
+
+  .img-container__item {
+    margin-block-start: 5px;
   }
 }
