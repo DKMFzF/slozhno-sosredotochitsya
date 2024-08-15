@@ -11,4 +11,8 @@
   --subtitle-text-color: #000028;
   --menu-text-color: #FF0070;
   --header-rec-text-color: #FF0070;
+  --header-decor-element: #FF0070;
+
+  /* Фон */
+  --header-background-image: url("../images/cover-image-dark.png");
 }

@@ -14,12 +14,11 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
-  background-color: grey;
-  background-image: url("../images/cover-image-dark.png");
+  background-color: midnightblue;
+  background-image: var(--header-background-image, midnightblue);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* object-fit: cover; */
 }
 
 /* Меню шапки */
@@ -38,7 +37,7 @@
   border: none;
   width: 70px;
   background-color: transparent;
-  color: var(--menu-text-color, grey);
+  color: var(--menu-text-color, deeppink);
   font-size: var(--text-font-size, 18px);
 }
 
@@ -47,7 +46,7 @@
 .header__theme-menu-button_type_auto:focus-visible,
 .header__theme-menu-button_type_dark:focus-visible {
   padding-block-end: 2px;
-  border-bottom: 1px solid var(--menu-text-color, grey);
+  border-bottom: 1px solid var(--menu-text-color, deeppink);
   outline: none;
 }
 
@@ -55,14 +54,14 @@
 .header__theme-menu-button_type_auto:hover,
 .header__theme-menu-button_type_dark:hover {
   padding-block-end: 2px;
-  outline: 1px solid var(--menu-text-color, grey);
+  outline: 1px solid var(--menu-text-color, deeppink);
 }
 
 .header__theme-menu-button_type_light:disabled,
 .header__theme-menu-button_type_auto:disabled,
 .header__theme-menu-button_type_dark:disabled {
   padding-block-end: 2px;
-  outline: 1px solid var(--menu-text-color, grey);
+  outline: 1px solid var(--menu-text-color, deeppink);
   pointer-events: none;
 }
 
@@ -70,7 +69,7 @@
 .header__title {
   align-self: center;
   font-weight: bold;
-  font-size: 157px;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   color: var(--header-title-color, blueviolet);
   text-shadow: 4px 4px var(--accent-color, red);
 }
@@ -86,7 +85,7 @@
   font-size: var(--text-font-size, 18px);
   justify-self: end;
   color: var(--subtitle-text-color, black);
-  background-color: var(--accent-color, red);
+  background-color: var(--accent-color, deeppink);
 }
 
 /* Надпись REC в правом верхнем углу сайта в тёмной теме */
@@ -96,7 +95,7 @@
   inset-inline-end: 30px;
   font-weight: normal;
   font-size: var(--text-font-size, 18px);
-  color: var(--header-rec-text-color, white);
+  color: var(--header-rec-text-color, deeppink);
 }
 
 .header__decor-rec::after {
@@ -105,9 +104,9 @@
   margin-inline-start: 10px;
   width: 9px;
   height: 9px;
-  background-color: var(--header-rec-text-color, white);
+  background-color: var(--header-rec-text-color, deeppink);
   border-radius: 50%;
-  box-shadow: 0 0 5px 2px var(--header-rec-text-color, white);
+  box-shadow: 0 0 5px 2px var(--header-rec-text-color, deeppink);
 }
 
 /* Уголки */
@@ -118,8 +117,8 @@
   inset-block-end: 20px;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--text-shadow-and-menu-color, red);
-  border-left: 1px solid var(--text-shadow-and-menu-color, red);
+  border-bottom: 1px solid var(--header-decor-element, deeppink);
+  border-left: 1px solid var(--header-decor-element, deeppink);
 }
 
 .header::after {
@@ -129,6 +128,83 @@
   inset-block-start: 20px;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--text-shadow-and-menu-color, red);
-  border-right: 1px solid var(--text-shadow-and-menu-color, red);
+  border-top: 1px solid var(--header-decor-element, red);
+  border-right: 1px solid var(--header-decor-element, red);
+}
+
+/* Медиа-запросы (Планшет)*/
+@media (max-width: 768px) {
+  /* Шапка */
+  .header {
+    width: 768px;
+    height: 1024px; 
+  }
+
+  .header__theme-menu {
+    margin-block-start: 140px;
+    margin-inline-end: 20px;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .header__theme-menu-list {
+    display: block;
+  }
+
+  .header__theme-menu-item {
+    margin-block-end: 10px;
+  }
+
+  .header__theme-menu-item:last-child {
+    margin-block-end: 0;
+  }
+
+  .header__subtitle-paragraph {
+    margin-block-end: 142px;
+    width: 364px;
+    height: 117px;
+  }
+}
+
+/* Медиа-запросы (Телефон)*/
+@media (max-width: 375px) {
+  /* Шапка */
+  .header {
+    width: 375px;
+    height: 668px;
+  }
+
+  .header__theme-menu {
+    margin-inline-end: 10px;
+    margin-block-start: 24px;
+  }
+
+  .header__title {
+    margin-inline-start: 10px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    line-height: 95px;
+  }
+
+  .header__subtitle-paragraph {
+    margin-inline-end: 0;
+    margin-block-end: 24px;
+    width: 355px;
+    height: 117px;
+    justify-self: center;
+  }
+
+  .header__decor-rec {
+    inset-block-start: 10px;
+    inset-inline-end: 20px;
+  }
+
+  .header::before {
+    inset-inline-start: 10px;
+    inset-block-end: 10px;
+  }
+
+  .header::after {
+    inset-inline-end: 10px;
+    inset-block-start: 10px;
+  }
 }
