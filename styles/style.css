@@ -72,7 +72,7 @@
   font-weight: bold;
   font-size: 157px;
   color: var(--header-title-color, blueviolet);
-  text-shadow: 4px 4px 0px var(--text-shadow-and-menu-color, red);
+  text-shadow: 4px 4px var(--accent-color, red);
 }
 
 /* Параграф под шапкой*/
@@ -86,7 +86,7 @@
   font-size: var(--text-font-size, 18px);
   justify-self: end;
   color: var(--subtitle-text-color, black);
-  background-color: var(--text-shadow-and-menu-color, red);
+  background-color: var(--accent-color, red);
 }
 
 /* Надпись REC в правом верхнем углу сайта в тёмной теме */
