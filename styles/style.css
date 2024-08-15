@@ -41,6 +41,11 @@ footer {
   text-shadow: 2px 2px var(--accent-color, deeppink);
 }
 
+/* Параграфы в секции 2 */
+.main__section-concentration-paragraphs {
+  margin-block-start: 10px;
+}
+
 /* Шапка */
 .header {
   position: relative;
@@ -164,7 +169,7 @@ footer {
   border-right: 1px solid var(--header-decor-element, red);
 }
 
-/* Первая секция */
+/* Первая секция (Почему сосредоточиться так сложно) */
 .hero {
   padding-block-start: 60px;
   margin-inline: 20px;
@@ -174,7 +179,6 @@ footer {
   row-gap: 20px;
 }
 
-/* Заголовок секции */
 .hero__section-title {
   grid-row-start: span 3;
 }
@@ -185,6 +189,25 @@ footer {
 
 .hero__pparagraphs {
   margin-block-start: 10px;
+}
+
+/* Вторая секция (Что снижает концентрация внимания) */
+.main__section-concentration {
+  margin-block-start: 60px;
+}
+
+.main__section-concentration-title {
+  margin-inline: 20px;
+  width: 315px;
+}
+
+.concentration__containers {
+  margin-block-start: 20px;
+  margin-inline: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 20px;
 }
 
 /* Медиа-запросы (Планшет 1024x768)*/
@@ -221,12 +244,26 @@ footer {
   }
 
   /* Main-stack */
+  /* Секция 1 */
   .hero__section-title {
     margin-inline-end: 7px; /* Добавил этот стиль что бы макету соотвествовал */
   }
 
   .hero__containers {
     margin-inline-start: 13px;
+  }
+
+  /* Секция 2 */
+  .main__section-concentration-title {
+    width: 200px;
+  }
+
+  .concentration__containers {
+    display: block;
+  }
+
+  .concentration__container {
+    margin-block-start: 20px;
   }
 }
 
@@ -273,6 +310,7 @@ footer {
   }
 
   /* Main-stack */
+  /* Секция 1 */
   .hero {
     display: block;
     padding-block-start: 40px;
@@ -286,5 +324,23 @@ footer {
   .hero__containers {
     margin-block-start: 20px;
     margin-inline: 10px;
+  }
+
+  /* Секция 2 */
+  .main__section-concentration {
+    margin-block-start: 50px;
+  }
+
+  .main__section-concentration-title {
+    margin-inline: 10px;
+    width: 300px;
+  }
+  
+  .concentration__containers { 
+    margin-inline: 10px;
+  }
+
+  .main__section-concentration-paragraphs {
+    margin-block-start: 11px;
   }
 }
