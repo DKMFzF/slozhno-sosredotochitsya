@@ -1,14 +1,29 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  position: relative;
   font-family: var(--all-font-family), sans-serif;
   font-size: var(--text-font-size, 18px);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
+/* Общие стили элементов */
+.section_title {
+  font-weight: bold;
+  color: var(--section-title-text-color, deeppink);
+}
+
+.accent-title {
+  font-weight: bold;
+  color: var(--accent-title-color, black);
+  background-color: var(--accent-color, deeppink);
+}
+
+.sectional__paragraph-text {
+  font-weight: normal;
+  color: var(--section-paragraph-text-color, gray);
+}
+
 /* Шапка */
 .header {
+  position: relative;
   max-width: 100%;
   height: 768px;
   display: grid;
@@ -70,8 +85,8 @@
   align-self: center;
   font-weight: bold;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  color: var(--header-title-color, blueviolet);
-  text-shadow: 4px 4px var(--accent-color, red);
+  color: var(--header-title-text-color, blueviolet);
+  text-shadow: 4px 4px var(--accent-color, deeppink);
 }
 
 /* Параграф под шапкой*/
@@ -81,32 +96,7 @@
   width: 491px;
   height: 71px;
   align-self: center;
-  font-weight: bold;
-  font-size: var(--text-font-size, 18px);
   justify-self: end;
-  color: var(--subtitle-text-color, black);
-  background-color: var(--accent-color, deeppink);
-}
-
-/* Надпись REC в правом верхнем углу сайта в тёмной теме */
-.header__decor-rec {
-  position: absolute;
-  inset-block-start: 20px;
-  inset-inline-end: 30px;
-  font-weight: normal;
-  font-size: var(--text-font-size, 18px);
-  color: var(--header-rec-text-color, deeppink);
-}
-
-.header__decor-rec::after {
-  content: "";
-  display: inline-block;
-  margin-inline-start: 10px;
-  width: 9px;
-  height: 9px;
-  background-color: var(--header-rec-text-color, deeppink);
-  border-radius: 50%;
-  box-shadow: 0 0 5px 2px var(--header-rec-text-color, deeppink);
 }
 
 /* Уголки */
@@ -130,6 +120,42 @@
   height: 25px;
   border-top: 1px solid var(--header-decor-element, red);
   border-right: 1px solid var(--header-decor-element, red);
+}
+
+/* Первая секция */
+.hero {
+
+}
+
+/* Заголовок секции */
+.hero__section-title {
+
+}
+
+/* Секция многозадачности */
+.hero__section-multitasking {
+
+}
+
+.hero__section-multitasking-title {
+
+}
+
+.hero__section-multitasking-paragraph {
+
+}
+
+/* Секция дофамина */
+.hero__section-dopamine {
+
+}
+
+.hero__section-dopamine-title {
+
+}
+
+.hero__section-dopamine-paragraph {
+  
 }
 
 /* Медиа-запросы (Планшет)*/

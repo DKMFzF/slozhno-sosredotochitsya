@@ -1,17 +1,20 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 :root {
   /* Текст */
   --all-font-family: 'IBM Plex mono', sans-serif;
   --text-font-size: 18px;
-  --header-title-color: #DB00FF;
+
+  --header-title-text-color: #DB00FF;
+
   --accent-color: #FF0070;
-  --subtitle-text-color: #000028;
+  --accent-title-color: #000028;
+
   --menu-text-color: #FF0070;
+
   --header-rec-text-color: #FF0070;
   --header-decor-element: #FF0070;
+  
+  --section-paragraph-text-color: #F1B2CE;
+  --section-title-text-color: #FF0070;
 
   /* Фон */
   --header-background-image: url("../images/cover-image-dark.png");

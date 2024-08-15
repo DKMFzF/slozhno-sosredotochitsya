@@ -1,12 +1,42 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  /* Текст */
+  --all-font-family: 'IBM Plex mono', sans-serif;
+  --text-font-size: 18px;
+
+  --header-title-text-color: #DB00FF;
+
+  --accent-color: #FF0070;
+  --accent-title-color: #000028;
+
+  --menu-text-color: #FF0070;
+
+  --header-rec-text-color: #FF0070;
+  --header-decor-element: #FF0070;
+  
+  --section-paragraph-text-color: #F1B2CE;
+  --section-title-text-color: #FF0070;
+
+  /* Фон */
+  --header-background-image: url("../images/cover-image-dark.png");
+}
+
+/* Надпись REC в правом верхнем углу сайта в тёмной теме */
+.header__decor-rec {
+  position: absolute;
+  inset-block-start: 20px;
+  inset-inline-end: 30px;
+  font-weight: normal;
+  font-size: var(--text-font-size, 18px);
+  color: var(--header-rec-text-color, deeppink);
+}
+
+.header__decor-rec::after {
+  content: "";
+  display: inline-block;
+  margin-inline-start: 10px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--header-rec-text-color, deeppink);
+  border-radius: 50%;
+  box-shadow: 0 0 5px 2px var(--header-rec-text-color, deeppink);
 }
