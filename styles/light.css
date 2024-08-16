@@ -10,12 +10,15 @@
   --accent-title-color: #353430;
   
   --menu-text-color: #353430;
+  --menu-outline-hover: #32312D66;
 
   --header-rec-text-color: transparent;
   --header-decor-element: #353430;
   
   --section-paragraph-text-color: #353430;
   --section-title-text-color: #353430;
+
+  --link-color: black;
 
   /* Фон */
   --header-background-image: url("../images/cover-image-light.png");

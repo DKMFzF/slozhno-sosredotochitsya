@@ -41,6 +41,15 @@ footer {
   text-shadow: 2px 2px var(--accent-color, deeppink);
 }
 
+.link:hover {
+  outline: none;
+  border-bottom: 1px solid var(--section-paragraph-text-color, gray);
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--section-paragraph-text-color, gray);
+}
+
 /* Параграфы в секции 2 */
 .main__section-concentration-paragraphs {
   margin-block-start: 10px;
@@ -99,7 +108,7 @@ footer {
 .header__theme-menu-button_type_auto:hover,
 .header__theme-menu-button_type_dark:hover {
   padding-block-end: 2px;
-  outline: 1px solid var(--menu-text-color, deeppink);
+  outline: 1px solid var(--menu-outline-hover, deeppink);
 }
 
 .header__theme-menu-button_type_light:disabled,
@@ -261,6 +270,7 @@ h4 ~ p {
   gap: 20px;
 }
 
+/* Настройка картинок */
 .img-container__item {
   overflow: hidden;
 }
@@ -271,6 +281,7 @@ h4 ~ p {
   object-fit: cover;
 }
 
+/* Расположение картинок */
 .div__img-sunset {
   grid-column-end: span 2;
 }
