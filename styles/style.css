@@ -115,8 +115,8 @@ footer {
   align-self: center;
   font-weight: bold;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  color: var(--header-title-text-color, blueviolet);
-  text-shadow: 4px 4px var(--accent-color, deeppink);
+  color: var(--header-and-footer-title-text-color, blueviolet);
+  text-shadow: 4px 4px var(--header-and-footer-title-shadow-color, deeppink);
 }
 
 /* Параграф под шапкой*/
@@ -169,8 +169,8 @@ footer {
   inset-block-start: 20px;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--header-decor-element, red);
-  border-right: 1px solid var(--header-decor-element, red);
+  border-top: 1px solid var(--header-decor-element, deeppink);
+  border-right: 1px solid var(--header-decor-element, deeppink);
 }
 
 /* Первая секция (Почему сосредоточиться так сложно) */
@@ -290,13 +290,51 @@ h4 ~ p {
 .div__street {
   grid-column-start: 2;
   grid-column-end: span 2;
-} 
+}
+
+.footer {
+  position: relative;
+  padding-block-start: 90px;
+  width: 100%;
+  height: 768px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-title {
+  color: var(--header-and-footer-title-text-color, midnightblue);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: bold;
+  text-shadow: 4px 4px var(--header-and-footer-title-shadow-color, deeppink);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 20px;
+  inset-block-end: 20px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--header-decor-element, deeppink);
+  border-left: 1px solid var(--header-decor-element, deeppink);
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  inset-inline-end: 20px;
+  inset-block-start: 68px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--header-decor-element, deeppink);
+  border-right: 1px solid var(--header-decor-element, deeppink);
+}
 
 /* Медиа-запросы (Планшет 1024x768)*/
 @media (max-width: 768px) {
   /* Шапка */
   .header {
-    width: 768px;
     height: 1024px;
   }
 
@@ -352,13 +390,17 @@ h4 ~ p {
   .main___concentrate-better__container {
     margin-inline-start: 11px;
   }
+
+  /* Фууууутер */
+  .footer {
+    height: 1024px;
+  }
 }
 
 /* Медиа-запросы (Телефон 375px)*/
 @media (max-width: 375px) {
   /* Шапка */
   .header {
-    width: 375px;
     height: 668px;
   }
 
@@ -463,5 +505,25 @@ h4 ~ p {
 
   .img-container__item {
     margin-block-start: 5px;
+  }
+
+  /* ФУУУУУтер */
+  .footer {
+    height: 665px;
+  }
+
+  .footer-title { 
+    margin-block-end: 15px;
+    font-size: 116px;
+  }
+  
+  .footer::before {
+    inset-inline-start: 10px;
+    inset-block-end: 10px;
+  }
+
+  .footer::after {
+    inset-inline-end: 10px;
+    inset-block-start: 49px;
   }
 }

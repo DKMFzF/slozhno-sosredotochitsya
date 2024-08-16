@@ -3,7 +3,8 @@
   --all-font-family: 'IBM Plex mono', sans-serif;
   --text-font-size: 18px;
 
-  --header-title-text-color: #DB00FF;
+  --header-and-footer-title-text-color: #DB00FF;
+  --header-and-footer-title-shadow-color: #FF0070;
 
   --accent-color: #FF0070;
   --accent-title-color: #000028;
