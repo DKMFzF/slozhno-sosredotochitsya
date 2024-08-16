@@ -1,20 +1,20 @@
 .page.theme_light {
   /* Текст */
-  --all-font-family: 'IBM Plex mono', sans-serif;
+  --all-font-family: "IBM Plex mono", sans-serif;
   --text-font-size: 18px;
 
-  --header-and-footer-title-text-color: #FFC2E6;
-  --header-and-footer-title-shadow-color: #FF0070;
+  --header-and-footer-title-text-color: #ffc2e6;
+  --header-and-footer-title-shadow-color: #ff0070;
 
-  --accent-color: #FF8DCB;
+  --accent-color: #ff8dcb;
   --accent-title-color: #353430;
-  
+
   --menu-text-color: #353430;
-  --menu-outline-hover: #32312D66;
+  --menu-outline-hover: #32312d66;
 
   --header-rec-text-color: transparent;
   --header-decor-element: #353430;
-  
+
   --section-paragraph-text-color: #353430;
   --section-title-text-color: #353430;
 
@@ -22,31 +22,31 @@
 
   /* Фон */
   --header-background-image: url("../images/cover-image-light.png");
-  --main-stack-and-footer-background-color: #FFF1F7;
+  --main-stack-and-footer-background-color: #fff1f7;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     /* Текст */
-    --all-font-family: 'IBM Plex mono', sans-serif;
+    --all-font-family: "IBM Plex mono", sans-serif;
     --text-font-size: 18px;
-    
-    --header-and-footer-title-text-color: #FFC2E6;
-    --header-and-footer-title-shadow-color: #FF0070;
 
-    --accent-color: #FF8DCB;
+    --header-and-footer-title-text-color: #ffc2e6;
+    --header-and-footer-title-shadow-color: #ff0070;
+
+    --accent-color: #ff8dcb;
     --accent-title-color: #353430;
-    
+
     --menu-text-color: #353430;
 
     --header-rec-text-color: transparent;
     --header-decor-element: #353430;
-    
+
     --section-paragraph-text-color: #353430;
     --section-title-text-color: #353430;
 
     /* Фон */
     --header-background-image: url("../images/cover-image-light.png");
-    --main-stack-and-footer-background-color: #FFF1F7;
+    --main-stack-and-footer-background-color: #fff1f7;
   }
 }

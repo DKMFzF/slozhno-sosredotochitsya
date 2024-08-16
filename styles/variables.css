@@ -1,22 +1,22 @@
 :root {
   /* Текст */
-  --all-font-family: 'IBM Plex mono', sans-serif;
+  --all-font-family: "IBM Plex mono", sans-serif;
   --text-font-size: 18px;
 
-  --header-and-footer-title-text-color: #DB00FF;
-  --header-and-footer-title-shadow-color: #FF0070;
+  --header-and-footer-title-text-color: #db00ff;
+  --header-and-footer-title-shadow-color: #ff0070;
 
-  --accent-color: #FF0070;
+  --accent-color: #ff0070;
   --accent-title-color: #000028;
 
-  --menu-text-color: #FF0070;
-  --menu-outline-hover: #FF007066;
+  --menu-text-color: #ff0070;
+  --menu-outline-hover: #ff007066;
 
-  --header-rec-text-color: #FF0070;
-  --header-decor-element: #FF0070;
-  
-  --section-paragraph-text-color: #F1B2CE;
-  --section-title-text-color: #FF0070;
+  --header-rec-text-color: #ff0070;
+  --header-decor-element: #ff0070;
+
+  --section-paragraph-text-color: #f1b2ce;
+  --section-title-text-color: #ff0070;
 
   /* Фон */
   --header-background-image: url("../images/cover-image-dark.png");
