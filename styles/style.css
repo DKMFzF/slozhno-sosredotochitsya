@@ -150,7 +150,7 @@
   box-shadow: 0 0 5px 2px var(--header-rec-text-color, deeppink);
 }
 
-/* Уголки */
+/* Уголки для header и footer */
 :is(.header, .footer)::before {
   content: "";
   position: absolute;
