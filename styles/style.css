@@ -1,19 +1,13 @@
 .page {
+  position: relative;
+  z-index: 1;
   font-family: var(--all-font-family), monospace;
   font-size: var(--text-font-size, 18px);
-  background-image: var(--header-background-image, midnightblue);
+  background-color: var(--page-backgrounnd-color, midnightblue); /* Указал цвет для фона страницы */
+  background-image: var(--page-background-image, midnightblue); /* Указал изображение для фона страницы */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
-
-.theme_dark .page {
-  /* background-color: var(--page-backgrounnd-color, midnightblue); */
-  background-color: #000028;
-}
-
-body.theme_light {
-  background-color: var(--page-backgrounnd-color, white);;
 }
 
 /* Общие стили элементов */
@@ -68,12 +62,11 @@ body.theme_light {
 .header {
   position: relative;
   max-width: 100%;
-  height: 768px;
+  height: 100vh;
+  min-height: 668px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  /* background-color: midnightblue; */
-  background-image: var(--header-background-image, midnightblue);
+  grid-template-rows: 1fr min-content 1fr;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -100,24 +93,18 @@ body.theme_light {
 }
 
 /* Стили для кнопок */
-.header__theme-menu-button_type_light:focus-visible,
-.header__theme-menu-button_type_auto:focus-visible,
-.header__theme-menu-button_type_dark:focus-visible {
+.header__theme-menu-button:focus-visible {
   padding-block-end: 2px;
   border-bottom: 1px solid var(--menu-text-color, deeppink);
   outline: none;
 }
 
-.header__theme-menu-button_type_light:hover,
-.header__theme-menu-button_type_auto:hover,
-.header__theme-menu-button_type_dark:hover {
+.header__theme-menu-button:hover {
   padding-block-end: 2px;
   outline: 1px solid var(--menu-outline-hover, deeppink);
 }
 
-.header__theme-menu-button_type_light:disabled,
-.header__theme-menu-button_type_auto:disabled,
-.header__theme-menu-button_type_dark:disabled {
+.header__theme-menu-button:disabled {
   padding-block-end: 2px;
   outline: 1px solid var(--menu-text-color, deeppink);
   pointer-events: none;
@@ -127,17 +114,16 @@ body.theme_light {
 .header__title {
   align-self: center;
   font-weight: bold;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-size: var(--title-font-size-desktop, 157px);
   color: var(--header-and-footer-title-text-color, blueviolet);
   text-shadow: 4px 4px var(--header-and-footer-title-shadow-color, deeppink);
 }
 
 /* Параграф под шапкой*/
 .header__subtitle-paragraph {
-  margin-block-end: 83px;
+  margin-block-end: 58px;
   margin-inline-end: 20px;
   width: 491px;
-  height: 71px;
   align-self: center;
   justify-self: end;
 }
@@ -149,6 +135,7 @@ body.theme_light {
   inset-inline-end: 30px;
   font-weight: normal;
   font-size: var(--text-font-size, 18px);
+  text-transform: uppercase;
   color: var(--header-rec-text-color, deeppink);
 }
 
@@ -164,7 +151,7 @@ body.theme_light {
 }
 
 /* Уголки */
-.header::before {
+:is(.header, .footer)::before {
   content: "";
   position: absolute;
   inset-inline-start: 20px;
@@ -175,7 +162,7 @@ body.theme_light {
   border-left: 1px solid var(--header-decor-element, deeppink);
 }
 
-.header::after {
+:is(.header, .footer)::after {
   content: "";
   position: absolute;
   inset-inline-end: 20px;
@@ -309,9 +296,10 @@ h4 ~ p {
 
 .footer {
   position: relative;
-  padding-block-start: 90px;
+  margin-block-start: 46px;
   width: 100%;
-  height: 768px;
+  height: 100vh;
+  min-height: 668px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -319,42 +307,16 @@ h4 ~ p {
 
 .footer-title {
   color: var(--header-and-footer-title-text-color, midnightblue);
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-size: var(--title-font-size-desktop, 157px);
   font-weight: bold;
   text-shadow: 4px 4px var(--header-and-footer-title-shadow-color, deeppink);
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  inset-inline-start: 20px;
-  inset-block-end: 20px;
-  width: 25px;
-  height: 25px;
-  border-bottom: 1px solid var(--header-decor-element, deeppink);
-  border-left: 1px solid var(--header-decor-element, deeppink);
-}
-
-.footer::after {
-  content: "";
-  position: absolute;
-  inset-inline-end: 20px;
-  inset-block-start: 68px;
-  width: 25px;
-  height: 25px;
-  border-top: 1px solid var(--header-decor-element, deeppink);
-  border-right: 1px solid var(--header-decor-element, deeppink);
 }
 
 /* Медиа-запросы (Планшет 1024x768)*/
 @media (max-width: 768px) {
   /* Шапка */
-  .header {
-    height: 1024px;
-  }
-
   .header__theme-menu {
-    margin-block-start: 140px;
+    margin-block-start: 43px;
     margin-inline-end: 20px;
     justify-self: end;
     align-self: center;
@@ -373,9 +335,8 @@ h4 ~ p {
   }
 
   .header__subtitle-paragraph {
-    margin-block-end: 142px;
+    margin-block-end: 48px;
     width: 364px;
-    height: 117px;
   }
 
   /* Main-stack */
@@ -415,26 +376,21 @@ h4 ~ p {
 /* Медиа-запросы (Телефон 375px)*/
 @media (max-width: 375px) {
   /* Шапка */
-  .header {
-    height: 668px;
-  }
-
   .header__theme-menu {
     margin-inline-end: 10px;
-    margin-block-start: 22px;
+    margin-block-start: 2px;
   }
 
   .header__title {
     margin-inline-start: 10px;
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    font-size: var(--title-font-size-mobile, 116px);
     line-height: 95px;
   }
 
   .header__subtitle-paragraph {
     margin-inline-end: 0;
-    margin-block-end: 24px;
+    margin-block-end: 8px;
     width: 355px;
-    height: 117px;
     justify-self: center;
   }
 
@@ -443,12 +399,12 @@ h4 ~ p {
     inset-inline-end: 20px;
   }
 
-  .header::before {
+  :is(.header, .footer)::before {
     inset-inline-start: 10px;
     inset-block-end: 10px;
   }
 
-  .header::after {
+  :is(.header, .footer)::after {
     inset-inline-end: 10px;
     inset-block-start: 10px;
   }
@@ -530,21 +486,11 @@ h4 ~ p {
 
   /* ФУУУУУтер */
   .footer {
+    margin-block-start: 33px;
     height: 665px;
   }
 
   .footer-title {
-    margin-block-end: 15px;
-    font-size: 116px;
-  }
-
-  .footer::before {
-    inset-inline-start: 10px;
-    inset-block-end: 10px;
-  }
-
-  .footer::after {
-    inset-inline-end: 10px;
-    inset-block-start: 49px;
+    font-size: var(--title-font-size-mobile, 116px);
   }
 }

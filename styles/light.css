@@ -21,7 +21,7 @@
   --link-color: black;
 
   /* Фон */
-  --header-background-image: url("../images/cover-image-light.png");
+  --page-background-image: url("../images/cover-image-light.png");
   --page-backgrounnd-color: #fff1f7;
 }
 
@@ -38,6 +38,7 @@
     --accent-title-color: #353430;
 
     --menu-text-color: #353430;
+    --menu-outline-hover: #32312d66;
 
     --header-rec-text-color: transparent;
     --header-decor-element: #353430;
@@ -46,7 +47,7 @@
     --section-title-text-color: #353430;
 
     /* Фон */
-    --header-background-image: url("../images/cover-image-light.png");
+    --page-background-image: url("../images/cover-image-light.png");
     --page-backgrounnd-color: #fff1f7;
   }
 }

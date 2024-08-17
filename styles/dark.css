@@ -19,6 +19,6 @@
   --section-title-text-color: #ff0070;
 
   /* Фон */
-  --header-background-image: url("../images/cover-image-dark.png");
+  --page-background-image: url("../images/cover-image-dark.png");
   --page-backgrounnd-color: #000028;
 }
