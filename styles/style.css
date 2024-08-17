@@ -87,6 +87,7 @@
 .header__theme-menu-button {
   border: none;
   width: 70px;
+  cursor: pointer;
   background-color: transparent;
   color: var(--menu-text-color, deeppink);
   font-size: var(--text-font-size, 18px);
