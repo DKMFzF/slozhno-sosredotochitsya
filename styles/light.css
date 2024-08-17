@@ -1,6 +1,6 @@
 .page.theme_light {
   /* Текст */
-  --all-font-family: "IBM Plex mono", sans-serif;
+  --all-font-family: "IBM Plex mono", monospace;
   --text-font-size: 18px;
 
   --header-and-footer-title-text-color: #ffc2e6;
@@ -22,13 +22,13 @@
 
   /* Фон */
   --header-background-image: url("../images/cover-image-light.png");
-  --main-stack-and-footer-background-color: #fff1f7;
+  --page-backgrounnd-color: #fff1f7;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     /* Текст */
-    --all-font-family: "IBM Plex mono", sans-serif;
+    --all-font-family: "IBM Plex mono", monospace;
     --text-font-size: 18px;
 
     --header-and-footer-title-text-color: #ffc2e6;
@@ -47,6 +47,6 @@
 
     /* Фон */
     --header-background-image: url("../images/cover-image-light.png");
-    --main-stack-and-footer-background-color: #fff1f7;
+    --page-backgrounnd-color: #fff1f7;
   }
 }

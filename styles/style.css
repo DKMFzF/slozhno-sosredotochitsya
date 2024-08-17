@@ -1,5 +1,5 @@
 .page {
-  font-family: var(--all-font-family), sans-serif;
+  font-family: var(--all-font-family), monospace;
   font-size: var(--text-font-size, 18px);
   background-image: var(--header-background-image, midnightblue);
   background-size: cover;
@@ -7,12 +7,16 @@
   background-attachment: fixed;
 }
 
-/* Общие стили элементов */
-main,
-footer {
-  background-color: var(--main-stack-and-footer-background-color, midnightblue);
+.theme_dark .page {
+  /* background-color: var(--page-backgrounnd-color, midnightblue); */
+  background-color: #000028;
 }
 
+body.theme_light {
+  background-color: var(--page-backgrounnd-color, white);;
+}
+
+/* Общие стили элементов */
 /* Загаловки секций и параграфа в header */
 .section_title {
   font-weight: bold;
@@ -56,7 +60,7 @@ footer {
 }
 
 /* Контейнеры в секции 3 */
-.main___concentrate-better__container {
+.main___concentrate-better__margin {
   margin-inline-start: 8px;
 }
 
@@ -68,7 +72,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
-  background-color: midnightblue;
+  /* background-color: midnightblue; */
   background-image: var(--header-background-image, midnightblue);
   background-repeat: no-repeat;
   background-size: cover;
@@ -206,7 +210,7 @@ footer {
 
 /* Вторая секция (Что снижает концентрация внимания) */
 .main__section-concentration {
-  margin-block-start: 60px;
+  margin-block-start: 61px;
 }
 
 .main__section-concentration-title {
@@ -225,11 +229,11 @@ footer {
 
 /* Третия секция (Как кноцентрироваться лучше) */
 .main___section-concentrate-better {
-  margin-block-start: 80px;
+  margin-block-start: 83px;
   margin-inline: 20px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: repeat(5, min-content);
+  grid-template-rows: repeat(6, min-content);
 }
 
 .main___concentrate-better__container {
@@ -237,7 +241,7 @@ footer {
 }
 
 .main__section-concentrate-better-title {
-  grid-row-start: span 5;
+  grid-row-start: span 6;
 }
 
 .main___concentrate-better__container > h3:first-child {
@@ -398,8 +402,8 @@ h4 ~ p {
   }
 
   /* Секция 3 */
-  .main___concentrate-better__container {
-    margin-inline-start: 11px;
+  .main___concentrate-better__margin {
+    margin-inline-start: 13px;
   }
 
   /* Фууууутер */
@@ -468,7 +472,7 @@ h4 ~ p {
 
   /* Секция 2 */
   .main__section-concentration {
-    margin-block-start: 50px;
+    margin-block-start: 52px;
   }
 
   .main__section-concentration-title {
@@ -490,6 +494,11 @@ h4 ~ p {
     margin-inline: 10px;
     display: block;
   }
+
+  .main___concentrate-better__margin {
+    margin-block-start: 21px;
+    margin-inline-start: 0;
+}
 
   .main___concentrate-better__container {
     margin-inline-start: 0;

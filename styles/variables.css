@@ -1,6 +1,6 @@
 :root {
   /* Текст */
-  --all-font-family: "IBM Plex mono", sans-serif;
+  --all-font-family: "IBM Plex mono", monospace;
   --text-font-size: 18px;
 
   --header-and-footer-title-text-color: #db00ff;
@@ -20,5 +20,5 @@
 
   /* Фон */
   --header-background-image: url("../images/cover-image-dark.png");
-  --main-stack-and-footer-background-color: #000028;
+  --page-backgrounnd-color: #000028;
 }
