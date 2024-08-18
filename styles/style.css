@@ -152,7 +152,7 @@
 }
 
 /* Уголки для header и footer */
-:is(.header, .footer)::before {
+.corner-decor::before {
   content: "";
   position: absolute;
   inset-inline-start: 20px;
@@ -163,7 +163,7 @@
   border-left: 1px solid var(--header-decor-element, deeppink);
 }
 
-:is(.header, .footer)::after {
+.corner-decor::after {
   content: "";
   position: absolute;
   inset-inline-end: 20px;
@@ -217,7 +217,7 @@
 
 /* Третия секция (Как кноцентрироваться лучше) */
 .main___section-concentrate-better {
-  margin-block-start: 83px;
+  margin-block-start: 79px;
   margin-inline: 20px;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -370,7 +370,7 @@ h4 ~ p {
 
   /* Фууууутер */
   .footer {
-    height: 1024px;
+    min-height: 1024px;
   }
 }
 
@@ -488,7 +488,7 @@ h4 ~ p {
   /* ФУУУУУтер */
   .footer {
     margin-block-start: 33px;
-    height: 665px;
+    min-height: 665px;
   }
 
   .footer-title {
