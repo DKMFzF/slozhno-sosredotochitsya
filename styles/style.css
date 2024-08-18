@@ -400,12 +400,12 @@ h4 ~ p {
     inset-inline-end: 20px;
   }
 
-  :is(.header, .footer)::before {
+  .corner-decor::before {
     inset-inline-start: 10px;
     inset-block-end: 10px;
   }
 
-  :is(.header, .footer)::after {
+  .corner-decor::after {
     inset-inline-end: 10px;
     inset-block-start: 10px;
   }
